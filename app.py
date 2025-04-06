@@ -1,7 +1,6 @@
 import streamlit as st
-import easyocr
 from PIL import Image
-import numpy as np
+from ocr_helper import extract_text_from_image
 
 st.set_page_config(page_title="Handwriting to Text", layout="centered")
 
@@ -15,11 +14,8 @@ if uploaded_file is not None:
     st.image(image, caption="📸 Uploaded Image", use_column_width=True)
 
     with st.spinner("🔍 Extracting text..."):
-        reader = easyocr.Reader(['en'])
-        img_array = np.array(image)
-        result = reader.readtext(img_array, detail=0)
+        extracted_text = extract_text_from_image(image)
 
-    extracted_text = " ".join(result)
     st.subheader("📄 Extracted Text:")
     st.write(extracted_text)
 
