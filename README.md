@@ -1,23 +1,15 @@
 # 📝 Handwriting to Text App
 
-A Streamlit web app that extracts text from handwritten images using EasyOCR.
+This Streamlit app allows you to extract text from handwritten images using EasyOCR.
 
-## 💡 Features
-- Upload handwritten notes
-- AI-based OCR to extract text
-- Simple and fast web interface
+## 🚀 Features
+- Upload .jpg/.jpeg/.png handwritten images
+- Extract text using OCR
+- View and download extracted text
 
-## 🚀 How to Run
-1. Clone the repo
-2. Install requirements: `pip install -r requirements.txt`
-3. Run the app: `streamlit run app.py`
+## 🛠 Installation
 
-## 🛠 Tech Stack
-- Python
-- Streamlit
-- EasyOCR
-- PIL
-- NumPy
-
-## ✨ Output
-![Sample Image](sample_image.jpg)
+1. Clone the repo:
+```bash
+git clone https://github.com/INIYA70/handwriting_to_text_app.git
+cd handwriting_to_text_app
